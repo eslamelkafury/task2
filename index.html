@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تطبيقات الحوسبة السحابية ونماذج المنصات الإلكترونية الحديثة | تحويل التقرير البحثي إلى صفحة ويب باستخدام أساسيات HTML</title>
+    <style>
+        /* أنماط التصميم لتحسين عرض التقرير وقراءته */
+        :root {
+            --primary-color: #1e3a8a;
+            --secondary-color: #0284c7;
+            --accent-color: #0d9488;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border-color: #e2e8f0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans Arabic", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.8;
+            margin: 0;
+            padding: 30px 15px;
+            direction: rtl;
+        }
+
+        .container {
+            max-width: 950px;
+            margin: 0 auto;
+            background-color: var(--card-bg);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+            border: 1px solid var(--border-color);
+        }
+
+        /* ترويسة الصفحة وبيانات الطالب */
+        header {
+            border-bottom: 3px solid var(--primary-color);
+            padding-bottom: 25px;
+            margin-bottom: 35px;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.1rem;
+            margin-top: 0;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+
+        .subtitle {
+            font-size: 1.15rem;
+            color: var(--secondary-color);
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .student-card {
+            background-color: #eff6ff;
+            border: 1px solid #bfdbfe;
+            border-radius: 8px;
+            padding: 18px 25px;
+            display: inline-block;
+            text-align: right;
+            margin-top: 10px;
+            box-shadow: 0 2px 6px rgba(37, 99, 235, 0.08);
+        }
+
+        .student-card p {
+            margin: 6px 0;
+            font-size: 1.05rem;
+        }
+
+        /* العناوين الفرعية */
+        h2 {
+            color: var(--primary-color);
+            border-right: 5px solid var(--secondary-color);
+            padding-right: 12px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-size: 1.6rem;
+            background-color: #f1f5f9;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            border-radius: 0 6px 6px 0;
+        }
+
+        h3 {
+            color: var(--secondary-color);
+            margin-top: 25px;
+            margin-bottom: 12px;
+            font-size: 1.3rem;
+        }
+
+        p {
+            font-size: 1.05rem;
+            text-align: justify;
+            margin-bottom: 16px;
+        }
+
+        /* إبراز النصوص الهامة */
+        strong, b {
+            color: #0f172a;
+        }
+
+        /* تنسيق الصور */
+        figure {
+            margin: 30px auto;
+            text-align: center;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border: 1px solid var(--border-color);
+        }
+
+        figcaption {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-top: 10px;
+            font-weight: 500;
+        }
+
+        /* تنسيق الجداول */
+        .table-responsive {
+            overflow-x: auto;
+            margin: 30px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: right;
+            font-size: 1rem;
+            background-color: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: #ffffff;
+            padding: 14px 16px;
+            font-weight: 600;
+            border: 1px solid #1e3a8a;
+        }
+
+        td {
+            padding: 12px 16px;
+            border: 1px solid var(--border-color);
+            vertical-align: top;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+
+        tr:hover {
+            background-color: #f1f5f9;
+        }
+
+        /* القوائم والروابط */
+        ul {
+            padding-right: 25px;
+            margin-bottom: 25px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            font-size: 1.05rem;
+        }
+
+        a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            transition: color 0.2s, text-decoration 0.2s;
+        }
+
+        a:hover {
+            color: var(--primary-color);
+            text-decoration: underline;
+        }
+
+        /* قسم المراجع */
+        .references-list li {
+            padding: 8px 12px;
+            background-color: #f8fafc;
+            border-radius: 6px;
+            margin-bottom: 10px;
+            border-right: 3px solid var(--accent-color);
+        }
+
+        /* تذييل الصفحة */
+        footer {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- 1. ترويسة الصفحة وبيانات الطالب -->
+        <header>
+            <h1>تطبيقات الحوسبة السحابية ونماذج المنصات الإلكترونية الحديثة</h1>
+            <p class="subtitle">دراسة تحليلية لنماذج SaaS و PaaS و IaaS ودورها في التحول الرقمي</p>
+            
+            <!-- بطاقة بيانات الطالبة الأكاديمية -->
+            <div class="student-card">
+                <p><strong>المقرر الدراسي:</strong> تطبيقات الإنترنت والمنصات الإلكترونية</p>
+                <p><strong>اسم التكليف:</strong> تحويل التقرير البحثي إلى صفحة ويب باستخدام أساسيات HTML (Task 2)</p>
+                <p><strong>إعداد الطالبة:</strong> منة الله أشرف علي محمد</p>
+                <p><strong>الرقم الجامعي (الكود):</strong> 2503950</p>
+                <p><strong>إشراف:</strong> المهندسة مريم الليلي</p>
+            </div>
+        </header>
+
+        <!-- 2. قسم المقدمة -->
+        <section id="introduction">
+            <h2>المقدمة</h2>
+            
+            <h3>تطور تطبيقات الإنترنت والمنصات الرقمية</h3>
+            <p>
+                شهدت شبكة الإنترنت نقلة نوعية هائلة خلال العقدين الماضيين؛ حيث تحولت من مجرد مواقع إلكترونية ثابتة تعرض صفحات نصية معدومة التفاعل، إلى <strong>منصات سحابية تفاعلية متكاملة</strong> قادرة على خدمة ملايين المستخدمين لحظياً وبكفاءة فائقة. وتعتمد المنصات الحديثة على دمج خدمات الحوسبة السحابية والبنى التحتية الموزعة لتحقيق أعلى درجات الاستجابة والموثوقية.
+            </p>
+            <p>
+                وقد تميز هذا التطور بعدة ركائز تقنية جوهرية، أبرزها:
+            </p>
+            <ul>
+                <li><strong>إلغاء القيود المادية:</strong> إمكانية تشغيل ومعالجة البرمجيات المعقدة مباشرة في السحابة دون الحاجة للاستثمار في خوادم محلية باهظة الثمن.</li>
+                <li><strong>الوصول الشامل والمرن:</strong> إتاحة كافة البيانات والخدمات السحابية للمستخدمين عبر متصفحات الويب المعتادة ومن مختلف أنواع الأجهزة الذكية.</li>
+                <li><strong>التطوير والتحديث المستمر:</strong> تحديث وصيانة المنصات مركزياً وبشكل فوري وتلقائي دون إشعار المستخدم أو توقف المنظومة عن العمل.</li>
+            </ul>
+
+            <h3>الفرق الجوهري بين تطبيقات الإنترنت والمنصات الإلكترونية</h3>
+            <p>
+                على الرغم من التداخل الشائع بين المفهومين في الاستخدام اليومي، إلا أن هناك فوارق معمارية ووظيفية دقيقة بينهما:
+            </p>
+            <ul>
+                <li>
+                    <b>تطبيقات الإنترنت (Web Applications):</b> هي برمجيات مصممة لتنفيذ مهام محددة للمستخدم النهائي وتعمل على خوادم بعيدة عبر متصفح الويب، ومن أمثلتها محررات المستندات السحابية كـ <strong>Google Docs</strong> وتطبيقات البريد الإلكتروني.
+                </li>
+                <li>
+                    <b>المنصات الإلكترونية (Digital Platforms):</b> هي بيئات عمل ومنظومات برمجية موسعة تعمل كحلقة وصل تفاعلية تربط بين مقدمي الخدمات والمستهلكين، وتتيح تبادل البيانات والمعاملات التجارية المعقدة، مثل منصات التجارة الإلكترونية ومنصات التعليم الجامعي <strong>Blackboard</strong>.
+                </li>
+            </ul>
+
+            <!-- صورة توضيحية لمعمارية السحابة وتطبيقات الإنترنت -->
+            <figure>
+                <img src="cloud_architecture.png" alt="مخطط هيكلي لمعمارية الحوسبة السحابية وتطبيقات الإنترنت والمنصات الرقمية" width="850">
+                <figcaption>شكل (1): معمارية تطبيقات الإنترنت السحابية والمنصات الرقمية الحديثة (Cloud-Native Architecture)</figcaption>
+            </figure>
+        </section>
+
+        <!-- 3. قسم عرض الموضوع: النماذج الأساسية للمنصات السحابية -->
+        <section id="body">
+            <h2>عرض الموضوع: النماذج الأساسية للمنصات السحابية</h2>
+            <p>
+                تنقسم خدمات الحوسبة السحابية الحاضنة للمنصات الإلكترونية إلى ثلاثة نماذج رئيسية وفقاً لمعيار <strong>NIST</strong>، يحدد كل نموذج منها مستوى التحكم والمسؤوليات التقنية الموزعة بين مزود الخدمة والمستخدم:
+            </p>
+
+            <h3>1. البرمجيات كخدمة (Software as a Service - SaaS)</h3>
+            <p>
+                يمثل نموذج <strong>SaaS</strong> قمة الهرم السحابي، وهو عبارة عن تطبيقات برمجية متكاملة وجاهزة للاستخدام الفوري عبر متصفح الويب دون الحاجة لتنزيل أي ملفات أو تثبيتها محلياً. وتتولى الشركة المزودة مسؤولية استضافة الخوادم وقواعد البيانات، وإجراء الصيانة والأمان بالكامل.
+            </p>
+            <p>
+                من أبرز الأمثلة العملية على هذا النموذج: حزمة <strong>Google Workspace</strong> لإدارة وتعديل الملفات، وحزمة <strong>Microsoft 365</strong> السحابية، ومنصة <strong>Canva</strong> للتصميم الجرافيكي المباشر.
+            </p>
+
+            <h3>2. المنصة كخدمة (Platform as a Service - PaaS)</h3>
+            <p>
+                يوفر نموذج <strong>PaaS</strong> بيئة تطوير واستضافة متكاملة مخصصة للمبرمجين وفرق تطوير البرمجيات؛ حيث يتيح لهم الأدوات البرمجية، محركات التشغيل، وقواعد البيانات الجاهزة. ويتيح ذلك للمطور تركيز جهوده على <b>كتابة الكود البرمجي</b> ومنطق العمل فقط، دون الانشغال بإدارة البنية التحتية أو تكوين الخوادم.
+            </p>
+            <p>
+                ومن أشهر منصات <strong>PaaS</strong>: منصة <strong>GitHub Pages</strong> لاستضافة المواقع الثابتة مجاناً، ومنصتا <strong>Vercel</strong> و <strong>Heroku</strong> لنشر تطبيقات الويب بسرعة فائقة، و <strong>Google App Engine</strong> لبناء تطبيقات قابلة للتوسع التلقائي.
+            </p>
+
+            <h3>3. البنية التحتية كخدمة (Infrastructure as a Service - IaaS)</h3>
+            <p>
+                يُعد نموذج <strong>IaaS</strong> الركيزة الأساسية والطبقة التأسيسية للحوسبة السحابية؛ حيث يمنح المؤسسات إمكانية استئجار موارد حوسبية افتراضية نقية تشمل <strong>الخوادم الافتراضية، مساحات التخزين، والمحولات الشبكية</strong> عبر الإنترنت. ويمنح هذا النموذج مهندسي الأنظمة تحكماً كاملاً في نظام التشغيل والبرمجيات المثبتة.
+            </p>
+            <p>
+                ومن رواد هذا المجال: خدمات أمازون السحابية <strong>Amazon Web Services (AWS)</strong>، ومنصة <strong>Microsoft Azure</strong>، بالإضافة إلى البنية التحتية لمنصة <strong>Cloudflare</strong> لحماية وتسريع توصيل المحتوى الرقمي.
+            </p>
+
+            <!-- جدول المقارنة التحليلية الشاملة -->
+            <h3>مقارنة تحليلية شاملة بين نماذج الخدمات السحابية</h3>
+            <p>
+                يلخص الجدول التالي مقارنة دقيقة بين النماذج السحابية الثلاثة من حيث الفئة المستهدفة، مستوى الإدارة، والمسؤوليات التشغيلية:
+            </p>
+
+            <div class="table-responsive">
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th>وجه المقارنة</th>
+                            <th>البرمجيات كخدمة (SaaS)</th>
+                            <th>المنصة كخدمة (PaaS)</th>
+                            <th>البنية التحتية كخدمة (IaaS)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>الفئة المستهدفة</strong></td>
+                            <td>المستخدمون النهائيون والشركات</td>
+                            <td>المبرمجون ومطورو الويب</td>
+                            <td>مهندسو الشبكات والأنظمة السحابية</td>
+                        </tr>
+                        <tr>
+                            <td><strong>الوظيفة الرئيسية</strong></td>
+                            <td>تشغيل تطبيقات جاهزة عبر المتصفح</td>
+                            <td>بناء ونشر وتطوير التطبيقات</td>
+                            <td>تأجير عتاد افتراضي وخوادم وشبكات</td>
+                        </tr>
+                        <tr>
+                            <td><strong>مستوى إدارة العميل</strong></td>
+                            <td>إدارة البيانات الشخصية وإعدادات الاستخدام فقط</td>
+                            <td>إدارة التطبيق والأكواد البرمجية والبيانات</td>
+                            <td>تحكم كامل بنظام التشغيل، الشبكات، والبرمجيات</td>
+                        </tr>
+                        <tr>
+                            <td><strong>مسؤولية المزود السحابي</strong></td>
+                            <td>إدارة كاملة للمنظومة، الخوادم، والأمان</td>
+                            <td>إدارة الخوادم، بيئات التشغيل، وقواعد البيانات</td>
+                            <td>صيانة العتاد الفيزيائي ومراكز البيانات وتوفير الاتصال</td>
+                        </tr>
+                        <tr>
+                            <td><strong>أبرز الأمثلة العملية</strong></td>
+                            <td>Google Docs, Microsoft 365, Canva</td>
+                            <td>GitHub Pages, Vercel, Google App Engine</td>
+                            <td>Amazon AWS, Microsoft Azure, Cloudflare</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>أبرز مجالات المنصات الإلكترونية في حياتنا اليومية</h3>
+            <p>
+                تتعدد تطبيقات المنصات الإلكترونية لتغطي مختلف جوانب الحياة الحديثة، ومنها:
+            </p>
+            <ul>
+                <li><strong>التجارة الإلكترونية (E-Commerce):</strong> منصات بيع المنتجات وإدارة الدفع مثل <b>Amazon</b> و <b>Noon</b> و <b>سلة</b>.</li>
+                <li><strong>التعليم الإلكتروني (E-Learning):</strong> منظومات إدارة المقررات والاختبارات مثل <b>Blackboard</b> و <b>Coursera</b>.</li>
+                <li><strong>التعاون وإدارة المشاريع (Collaboration):</strong> بيئات العمل الجماعي ومشاركة الأكواد مثل <b>GitHub</b> و <b>Notion</b>.</li>
+                <li><strong>الخدمات المالية الرقمية (FinTech):</strong> حلول المدفوعات والمحافظ الإلكترونية مثل <b>Apple Pay</b> و <b>PayPal</b>.</li>
+            </ul>
+
+            <h3>المميزات والتحديات التقنية للاعتماد على المنصات السحابية</h3>
+            <p>
+                يقدم الاعتماد على المنصات السحابية مزايا جوهرية تقابلها بعض التحديات التقنية:
+            </p>
+            <ul>
+                <li><b>المميزات:</b> تقليل التكاليف التأسيسية لشراء الأجهزة، القابلية الفائقة للمرونة والتوسع (Scalability) لاستيعاب ملايين الزيارات، ودعم العمل الجماعي اللحظي بين فرق العمل.</li>
+                <li><b>التحديات:</b> متطلبات الأمن السيبراني المشددة وضرورة تشفير البيانات، إلى جانب الارتباط التام بمدى جودة وسرعة الاتصال بشبكة الإنترنت.</li>
+            </ul>
+        </section>
+
+        <!-- 4. قسم الخاتمة -->
+        <section id="conclusion">
+            <h2>الخاتمة</h2>
+            <p>
+                في ختام هذا التقرير، نخلص إلى أن <strong>تطبيقات الإنترنت والمنصات الإلكترونية السحابية</strong> أصبحت الركيزة الأساسية التي يقوم عليها الاقتصاد الرقمي العالمي. ويتيح الفهم المعماري العميق للفروقات بين نماذج <strong>SaaS</strong> و <strong>PaaS</strong> و <strong>IaaS</strong> تمكين المطورين والمؤسسات من اتخاذ القرارات الهندسية الصحيحة لبناء منصات رقمية متطورة، مرنة، وآمنة تلبي تطلعات المستقبل الرقمي.
+            </p>
+        </section>
+
+        <!-- 5. قسم المراجع والروابط التشعبية -->
+        <section id="references">
+            <h2>المراجع والمصادر العلمية</h2>
+            <p>
+                تم الاستناد في إعداد هذا البحث إلى مجموعة من المصادر والدراسات العلمية والتقنية المعتمدة، ويمكن الوصول إليها مباشرة عبر الروابط التالية:
+            </p>
+            
+            <ul class="references-list">
+                <li>
+                    <a href="https://csrc.nist.gov/publications/detail/sp/800-145/final" target="_blank" rel="noopener noreferrer">
+                        <strong>NIST Cloud Computing Definition:</strong> Mell, P., &amp; Grance, T. (2011). The NIST Definition of Cloud Computing. National Institute of Standards and Technology, Special Publication 800-145.
+                    </a>
+                </li>
+                <li>
+                    <a href="https://wwnorton.com/books/Platform-Revolution/" target="_blank" rel="noopener noreferrer">
+                        <strong>Platform Revolution:</strong> Parker, G., Van Alstyne, M., &amp; Choudary, S. (2016). Platform Revolution: How Networked Markets Are Transforming the Economy. W. W. Norton &amp; Company.
+                    </a>
+                </li>
+                <li>
+                    <a href="https://link.springer.com/book/10.1007/978-3-319-58715-8" target="_blank" rel="noopener noreferrer">
+                        <strong>Electronic Commerce 2018:</strong> Turban, E., Outland, J., King, D., Lee, J. K., Liang, T. P., &amp; Turban, D. C. A Managerial and Social Networks Perspective. Springer.
+                    </a>
+                </li>
+                <li>
+                    <a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/Web_mechanics" target="_blank" rel="noopener noreferrer">
+                        <strong>MDN Web Docs:</strong> Mozilla Developer Network — Web Application Architecture &amp; Client-Server Fundamentals.
+                    </a>
+                </li>
+                <li>
+                    <a href="https://aws.amazon.com/types-of-cloud-computing/" target="_blank" rel="noopener noreferrer">
+                        <strong>AWS Documentation:</strong> Amazon Web Services — Types of Cloud Computing (IaaS, PaaS, SaaS Overview).
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+        <!-- تذييل الصفحة -->
+        <footer>
+            <p>تم إعداد وتطوير هذه الصفحة كجزء من متطلبات مقرر تطبيقات الإنترنت والمنصات الإلكترونية &copy; 2026</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
+
